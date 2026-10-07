@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { profile, SITE_URL } from "@/data/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,11 +13,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = `${profile.name} | ${profile.title}`;
+
 export const metadata: Metadata = {
-  title: "Matthew Tran | Software Engineer",
-  description:
-    "Software engineer at NICE CXone Knowledge owning features end to end, building AI-first, and mentoring teams.",
+  metadataBase: new URL(SITE_URL),
+  title,
+  description: profile.description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: profile.name,
+    title,
+    description: profile.description,
+  },
+  twitter: { card: "summary_large_image", title, description: profile.description },
 };
+
+export const viewport: Viewport = { themeColor: "#07070b" };
 
 export default function RootLayout({
   children,
