@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Matthew Tran | Front End Engineer",
+  title: "Matthew Tran | Software Engineer",
   description:
-    "Front end engineer at NICE CXOne MPower and tech enthusiast focused on building intuitive, performant web experiences.",
+    "Software engineer at NICE CXone Mpower building with AI, focused on building intuitive, performant web experiences.",
 };
 
 export default function RootLayout({
