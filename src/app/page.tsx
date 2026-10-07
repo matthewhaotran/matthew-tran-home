@@ -109,8 +109,8 @@ export default function Home() {
                 ships.
               </p>
               <p>
-                I also like leveling up the people around me: I&apos;ve trained
-                5 engineers through pairing, setup guidance and docs. Away from
+                I also like leveling up the people around me: I train and
+                mentor teammates through pairing, setup guidance and docs. Away from
                 the keyboard you&apos;ll find me playing pickleball, traveling,
                 hunting for the next great meal, or at a concert.
               </p>
