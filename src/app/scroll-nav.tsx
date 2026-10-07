@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 const items = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
   { id: "toolbox", label: "Toolbox" },
+  { id: "projects", label: "Projects" },
 ];
 
 export default function ScrollNav() {

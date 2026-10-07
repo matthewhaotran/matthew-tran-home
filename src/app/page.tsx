@@ -36,6 +36,7 @@ const roles = [
 const projects = [
   {
     name: "Chat",
+    image: "/projects/chat.png",
     href: "https://chat.matthew-tran.com",
     label: "chat.matthew-tran.com",
     paragraphs: [
@@ -56,6 +57,7 @@ const projects = [
   },
   {
     name: "Matthew Tran Shop",
+    image: "/projects/shop.png",
     href: "https://shop.matthew-tran.com",
     label: "shop.matthew-tran.com",
     paragraphs: [
@@ -199,6 +201,20 @@ export default function Home() {
             </ol>
           </section>
 
+          <section id="toolbox" className="mb-24 scroll-mt-16 lg:mb-32">
+            <h3 className="mb-6 text-xs font-bold uppercase tracking-[0.15em] text-zinc-200 lg:sr-only">
+              Toolbox
+            </h3>
+            <dl className="space-y-4 text-sm">
+              {toolbox.map(({ label, items }) => (
+                <div key={label} className="grid gap-1 sm:grid-cols-8 sm:gap-6">
+                  <dt className="font-medium text-zinc-200 sm:col-span-2">{label}</dt>
+                  <dd className="leading-relaxed sm:col-span-6">{items.join(" · ")}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+
           <section id="projects" className="mb-24 scroll-mt-16 lg:mb-32">
             <h3 className="mb-6 text-xs font-bold uppercase tracking-[0.15em] text-zinc-200 lg:sr-only">
               Projects
@@ -209,6 +225,23 @@ export default function Home() {
                   key={pr.name}
                   className="rounded-xl border border-white/10 bg-white/[0.03] p-6 transition lg:hover:bg-white/[0.05]"
                 >
+                  {pr.image && (
+                    <a
+                      href={pr.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Open ${pr.name}`}
+                      className="mb-5 block overflow-hidden rounded-lg border border-white/10 transition hover:border-cyan-400/40"
+                    >
+                      <Image
+                        src={pr.image}
+                        alt={`Screenshot of ${pr.name}`}
+                        width={1440}
+                        height={900}
+                        className="h-auto w-full"
+                      />
+                    </a>
+                  )}
                   <a
                     href={pr.href}
                     target="_blank"
@@ -231,20 +264,6 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-          </section>
-
-          <section id="toolbox" className="mb-24 scroll-mt-16 lg:mb-32">
-            <h3 className="mb-6 text-xs font-bold uppercase tracking-[0.15em] text-zinc-200 lg:sr-only">
-              Toolbox
-            </h3>
-            <dl className="space-y-4 text-sm">
-              {toolbox.map(({ label, items }) => (
-                <div key={label} className="grid gap-1 sm:grid-cols-8 sm:gap-6">
-                  <dt className="font-medium text-zinc-200 sm:col-span-2">{label}</dt>
-                  <dd className="leading-relaxed sm:col-span-6">{items.join(" · ")}</dd>
-                </div>
-              ))}
-            </dl>
           </section>
 
           <section className="rounded-2xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur">
