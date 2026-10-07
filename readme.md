@@ -7,7 +7,7 @@ Personal portfolio for Matthew Tran, a software engineer building with AI. Live 
 ## What's on the page
 
 - **About**: who I am and how I work (AI-first, MCP tooling, mentoring)
-- **Experience**: Software Engineer, QA Engineer, Support
+- **Experience**: Software Engineer, QA Engineer, Technical Support
 - **Toolbox**: AI tooling and core stack
 - **Projects**: [Chat](https://chat.matthew-tran.com), [Matthew Tran Shop](https://shop.matthew-tran.com) and [Unpaywall](https://unpaywall.matthew-tran.com), with previews
 

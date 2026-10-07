@@ -18,7 +18,10 @@ export const projects: Project[] = [
     href: "https://chat.matthew-tran.com",
     label: "chat.matthew-tran.com",
     image: "/projects/chat.png",
-    text: "My own AI chat app: a place to put the tools and workflows I use every day into something anyone can try. It's how I keep learning by building, and a live proof that I practice the AI-first engineering I talk about.",
+    text: "A ChatGPT-style chat app I built end to end. Guests can jump right in, Google sign-in saves your chat history, and every model call is logged so I can compare models. It's a live proof that I practice the AI-first engineering I talk about.",
+    stack:
+      "Next.js · React · TypeScript · Tailwind · Baseten (LLM inference) · Supabase (Postgres + auth) · Vercel",
+    code: "https://github.com/matthewhaotran/chat-matthew-tran-baseten",
     note: "It runs on a $20 monthly spend cap, so if it isn't responding the cap may have been hit. It also relies on free models, which can be rate limited or exhausted at times. If it doesn't work, try again later.",
     password: "juliette",
   },

@@ -95,8 +95,8 @@ export default function Home() {
               <p>
                 I&apos;m a software engineer at{" "}
                 <span className="font-medium text-zinc-200">{profile.company}</span>{" "}
-                with 5 years as a front-end engineer. I started in support in
-                2019, moved into QA, and found my home in front end, so I think
+                with 5 years as a front-end engineer. I started in technical
+                support, moved into QA automation, and found my home in front end, so I think
                 about the whole product lifecycle: what users struggle with, how
                 it should be built, and how it holds up once it ships.
               </p>
