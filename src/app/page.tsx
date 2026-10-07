@@ -3,6 +3,7 @@ import ScrollNav from "./scroll-nav";
 
 const EMAIL = "matthewhaotran@gmail.com";
 const GITHUB = "https://github.com/matthewhaotran";
+const CHAT_PASSWORD = "juliette";
 
 const roles = [
   {
@@ -29,6 +30,37 @@ const roles = [
     title: "Support",
     company: "",
     body: "Spent two years on the front line of user pain points, which is the foundation for my empathy-first approach to prioritizing and shipping features.",
+  },
+];
+
+const projects = [
+  {
+    name: "Chat",
+    href: "https://chat.matthew-tran.com",
+    label: "chat.matthew-tran.com",
+    paragraphs: [
+      "My own AI chat app: a place to put the tools and workflows I use every day into something anyone can try. It's how I keep learning by building, and a live proof that I practice the AI-first engineering I talk about.",
+    ],
+    note: (
+      <>
+        Password:{" "}
+        <code className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-cyan-300">
+          {CHAT_PASSWORD}
+        </code>
+        . It runs on a $20 monthly spend cap, so if it isn&apos;t responding the
+        cap may have been hit. It also relies on free models, which can be
+        rate limited or exhausted at times. If it doesn&apos;t work, try again
+        later.
+      </>
+    ),
+  },
+  {
+    name: "Matthew Tran Shop",
+    href: "https://shop.matthew-tran.com",
+    label: "shop.matthew-tran.com",
+    paragraphs: [
+      "I'm a passionate custom t-shirt maker, and every design is something I'd actually wear: minimal, personalized tees for moms and dads, printed to order. The shop is about the things that matter most to me right now: being a dad, and being an active member of my local community, including a Mira Mesa collection.",
+    ],
   },
 ];
 
@@ -165,6 +197,40 @@ export default function Home() {
                 </li>
               ))}
             </ol>
+          </section>
+
+          <section id="projects" className="mb-24 scroll-mt-16 lg:mb-32">
+            <h3 className="mb-6 text-xs font-bold uppercase tracking-[0.15em] text-zinc-200 lg:sr-only">
+              Projects
+            </h3>
+            <ul className="space-y-6">
+              {projects.map((pr) => (
+                <li
+                  key={pr.name}
+                  className="rounded-xl border border-white/10 bg-white/[0.03] p-6 transition lg:hover:bg-white/[0.05]"
+                >
+                  <a
+                    href={pr.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group inline-flex items-baseline gap-2 font-medium text-zinc-100 transition hover:text-cyan-300"
+                  >
+                    {pr.name}
+                    <span className="text-xs font-normal text-zinc-500 group-hover:text-cyan-400">
+                      {pr.label} ↗
+                    </span>
+                  </a>
+                  {pr.paragraphs.map((t) => (
+                    <p key={t} className="mt-3 text-sm leading-relaxed">{t}</p>
+                  ))}
+                  {pr.note && (
+                    <p className="mt-3 rounded-lg bg-white/[0.04] p-3 text-xs leading-relaxed">
+                      {pr.note}
+                    </p>
+                  )}
+                </li>
+              ))}
+            </ul>
           </section>
 
           <section id="toolbox" className="mb-24 scroll-mt-16 lg:mb-32">
