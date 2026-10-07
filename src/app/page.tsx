@@ -64,6 +64,15 @@ const projects = [
       "I'm a passionate custom t-shirt maker, and every design is something I'd actually wear: minimal, personalized tees for moms and dads, printed to order. The shop is about the things that matter most to me right now: being a dad, and being an active member of my local community, including a Mira Mesa collection.",
     ],
   },
+  {
+    name: "Unpaywall",
+    image: "/projects/unpaywall.png",
+    href: "https://unpaywall.matthew-tran.com",
+    label: "unpaywall.matthew-tran.com",
+    paragraphs: [
+      "A small utility that turns a pasted link into a clean, readable article. It works through a fallback chain, trying Googlebot-style access first, then archive.ph and the Wayback Machine, and is upfront when a site can't be opened. It's a good example of how I like to build: a narrow problem I ran into myself, a simple interface, and honest limits.",
+    ],
+  },
 ];
 
 const toolbox = [
