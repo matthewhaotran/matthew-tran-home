@@ -9,7 +9,7 @@ const roles = [
   {
     when: "4+ years",
     title: "Software Engineer",
-    company: "NICE CXone Mpower",
+    company: "NICE CXone Knowledge",
     body: "I own features end to end: scoping requirements with product and design, breaking epics into shippable work, building in TypeScript and React, and supporting them in production. I run an AI-first workflow with Claude Code, Cursor and custom MCP tools, and I lean on observability and disciplined debugging to root-cause production issues instead of patching symptoms.",
     tags: ["React", "Claude Code", "Playwright / Cypress"],
   },
@@ -154,7 +154,7 @@ export default function Home() {
             <div className="space-y-4 leading-relaxed">
               <p>
                 I&apos;m a software engineer at{" "}
-                <span className="font-medium text-zinc-200">NICE CXone Mpower</span>{" "}
+                <span className="font-medium text-zinc-200">NICE CXone Knowledge</span>{" "}
                 with 4+ years building intuitive, performant web applications.
                 I started in support, moved into QA, and found my home in front
                 end, so I think about the whole product lifecycle: what users
