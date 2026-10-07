@@ -9,30 +9,39 @@ const roles = [
     when: "4+ years",
     title: "Software Engineer",
     company: "NICE CXone Mpower",
-    body: "Building intuitive, performant web applications for a cloud contact-center platform. I care about UX, accessibility, performance and complex state — and use AI tools daily to write better code, faster.",
-    tags: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
+    body: "I own features end to end: scoping requirements with product and design, breaking epics into shippable work, building in TypeScript and React, and supporting them in production. I run an AI-first workflow with Claude Code, Cursor and custom MCP tools, and I lean on observability and disciplined debugging to root-cause production issues instead of patching symptoms.",
+    tags: ["React", "Claude Code", "Playwright / Cypress"],
+  },
+  {
+    when: "Alongside the work",
+    title: "Mentor & Team Enabler",
+    company: "",
+    body: "I train teammates on practical AI workflows, from prompting and agent setup to knowing when not to trust the output. I also onboard engineers, give thorough code reviews, and write down what I learn so the whole team ships faster.",
   },
   {
     when: "1 year",
     title: "QA Engineer",
     company: "",
-    body: "Owned release quality and learned to see a product the way it breaks. That instinct still shapes how I build and test.",
-    tags: ["Testing", "JavaScript"],
+    body: "Owned release quality and test automation, and learned to see a product the way it breaks. That instinct still shapes how I design, test and review code.",
   },
   {
     when: "2 years",
     title: "Support",
     company: "",
-    body: "Spent two years on the front line of user pain points — the foundation for my empathy-first approach to shipping features.",
-    tags: ["Communication", "Troubleshooting"],
+    body: "Spent two years on the front line of user pain points, which is the foundation for my empathy-first approach to prioritizing and shipping features.",
   },
 ];
 
-const toolbox = {
-  Languages: ["JavaScript", "TypeScript", "HTML", "CSS", "PHP", "C#"],
-  Tools: ["React", "Next.js", "Tailwind CSS", "Git & GitHub", "VS Code", "Webpack"],
-  "I enjoy solving": ["UX challenges", "Performance", "Accessibility", "State management"],
-};
+const toolbox = [
+  {
+    label: "AI tooling",
+    items: ["Claude Code", "GitHub Copilot", "MCP servers & custom skills"],
+  },
+  {
+    label: "Stack & delivery",
+    items: ["React", "Vitest / Jest", "Playwright / Cypress", "Datadog / Sentry"],
+  },
+];
 
 function Tag({ children }: { children: React.ReactNode }) {
   return (
@@ -77,8 +86,8 @@ export default function Home() {
               </span>
             </h2>
             <p className="mt-4 max-w-sm leading-relaxed">
-              I build well-crafted software with modern tools and AI, solving
-              real problems for real people.
+              I own features from idea to production, build with AI-first
+              workflows, and help teams do the same.
             </p>
             <ScrollNav />
           </div>
@@ -103,21 +112,26 @@ export default function Home() {
               <p>
                 I&apos;m a software engineer at{" "}
                 <span className="font-medium text-zinc-200">NICE CXone Mpower</span>{" "}
-                with 4+ years of experience building intuitive, performant web
-                applications. I started in support, moved into QA, and found my
-                home in front end — shipping reliable features and caring about
-                the details nobody notices until they&apos;re wrong.
+                with 4+ years building intuitive, performant web applications.
+                I started in support, moved into QA, and found my home in front
+                end, so I think about the whole product lifecycle: what users
+                struggle with, how it should be built, and how it holds up in
+                production.
               </p>
               <p>
-                As an avid user of AI tools, I leverage modern technology to
-                write better code faster and solve complex problems more
-                efficiently. That background gives me a holistic view of the
-                product lifecycle: I understand user pain points before I write
-                the first line.
+                I work AI-first. Claude Code, Cursor and custom MCP tooling are
+                part of how I plan, build, review and debug, and I&apos;m
+                deliberate about where they help and where human judgment still
+                wins. I turn vague requests into scoped, shippable plans, own
+                features through release, and chase production bugs down to the
+                root cause.
               </p>
               <p>
-                Away from the keyboard you&apos;ll find me playing pickleball,
-                traveling, hunting for the next great meal, or at a concert.
+                I also like leveling up the people around me: training teammates
+                on AI workflows, mentoring through code review, and documenting
+                what works. Away from the keyboard you&apos;ll find me playing
+                pickleball, traveling, hunting for the next great meal, or at a
+                concert.
               </p>
             </div>
           </section>
@@ -139,11 +153,13 @@ export default function Home() {
                         {r.company && ` · ${r.company}`}
                       </h4>
                       <p className="mt-2 text-sm leading-relaxed">{r.body}</p>
-                      <ul className="mt-4 flex flex-wrap gap-2">
-                        {r.tags.map((t) => (
-                          <Tag key={t}>{t}</Tag>
-                        ))}
-                      </ul>
+                      {r.tags && (
+                        <ul className="mt-4 flex flex-wrap gap-2">
+                          {r.tags.map((t) => (
+                            <Tag key={t}>{t}</Tag>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </div>
                 </li>
@@ -155,18 +171,14 @@ export default function Home() {
             <h3 className="mb-6 text-xs font-bold uppercase tracking-[0.15em] text-zinc-200 lg:sr-only">
               Toolbox
             </h3>
-            <div className="space-y-8">
-              {Object.entries(toolbox).map(([label, list]) => (
-                <div key={label}>
-                  <p className="mb-3 text-sm font-medium text-zinc-200">{label}</p>
-                  <ul className="flex flex-wrap gap-2">
-                    {list.map((t) => (
-                      <Tag key={t}>{t}</Tag>
-                    ))}
-                  </ul>
+            <dl className="space-y-4 text-sm">
+              {toolbox.map(({ label, items }) => (
+                <div key={label} className="grid gap-1 sm:grid-cols-8 sm:gap-6">
+                  <dt className="font-medium text-zinc-200 sm:col-span-2">{label}</dt>
+                  <dd className="leading-relaxed sm:col-span-6">{items.join(" · ")}</dd>
                 </div>
               ))}
-            </div>
+            </dl>
           </section>
 
           <section className="rounded-2xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur">
