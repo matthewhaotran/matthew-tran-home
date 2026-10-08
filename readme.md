@@ -9,7 +9,7 @@ Personal portfolio for Matthew Tran, a software engineer building with AI. Live 
 - **About**: who I am and how I work (AI-first, MCP tooling, mentoring)
 - **Experience**: Software Engineer, QA Engineer, Technical Support
 - **Toolbox**: AI tooling and core stack
-- **Projects**: [Chat](https://chat.matthew-tran.com), [Matthew Tran Shop](https://shop.matthew-tran.com) and [Unpaywall](https://unpaywall.matthew-tran.com), with previews
+- **Projects**: four featured projects with previews, plus a `/projects` page listing all of them (Chat, Shop, Unpaywall, Baby Dashboard, Upkeep)
 
 ## Stack
 
@@ -41,7 +41,7 @@ Copy and data are separate from markup:
 
 - [`src/data/site.ts`](src/data/site.ts): name, links, site description
 - [`src/data/experience.ts`](src/data/experience.ts): roles and bullets
-- [`src/data/projects.ts`](src/data/projects.ts): project cards (images live in `public/projects/`)
+- [`src/data/projects.ts`](src/data/projects.ts): project cards; set `featured: true` to show one on the homepage (images live in `public/projects/`)
 - [`src/data/toolbox.ts`](src/data/toolbox.ts): toolbox lines
 - [`src/app/page.tsx`](src/app/page.tsx): page layout; [`src/components/`](src/components) holds the scroll-spy nav, tag and password reveal
 

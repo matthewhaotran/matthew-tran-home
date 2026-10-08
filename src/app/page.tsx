@@ -1,16 +1,19 @@
 import Image from "next/image";
+import Link from "next/link";
 import ScrollNav from "@/components/scroll-nav";
-import RevealPassword from "@/components/reveal-password";
 import Tag from "@/components/tag";
 import { profile, SITE_URL } from "@/data/site";
 import { roles } from "@/data/experience";
 import { projects } from "@/data/projects";
+import ProjectCard from "@/components/project-card";
 import { toolbox } from "@/data/toolbox";
 
 const sectionTitle =
   "mb-6 text-xs font-bold uppercase tracking-[0.15em] text-zinc-200 lg:sr-only";
 const link =
   "rounded transition hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300";
+
+const featured = projects.filter((p) => p.featured);
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -172,72 +175,17 @@ export default function Home() {
           <section id="projects" className="mb-24 scroll-mt-16 lg:mb-32">
             <h2 className={sectionTitle}>Projects</h2>
             <ul className="space-y-6">
-              {projects.map((pr) => (
-                <li
-                  key={pr.id}
-                  className="rounded-xl border border-white/10 bg-white/[0.03] p-6 transition lg:hover:bg-white/[0.05]"
-                >
-                  <a
-                    href={pr.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    tabIndex={-1}
-                    aria-hidden
-                    className="mb-5 block overflow-hidden rounded-lg border border-white/10 transition hover:border-cyan-400/40"
-                  >
-                    <Image
-                      src={pr.image}
-                      alt=""
-                      width={1440}
-                      height={900}
-                      sizes="(min-width: 1280px) 520px, (min-width: 1024px) 45vw, 100vw"
-                      className="h-auto w-full"
-                    />
-                  </a>
-                  <h3 className="font-medium text-zinc-100">
-                    <a
-                      href={pr.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={`group inline-flex items-baseline gap-2 ${link}`}
-                    >
-                      {pr.name}
-                      <span className="text-xs font-normal text-zinc-400 group-hover:text-cyan-300">
-                        {pr.label} ↗
-                        <span className="sr-only"> (opens in a new tab)</span>
-                      </span>
-                    </a>
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed">{pr.text}</p>
-                  {pr.stack && (
-                    <p className="mt-3 text-[13px] text-zinc-300">
-                      <span className="font-semibold">Built with:</span> {pr.stack}
-                    </p>
-                  )}
-                  {pr.code && (
-                    <a
-                      href={pr.code}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={`mt-3 inline-block text-[13px] font-medium text-zinc-200 ${link}`}
-                    >
-                      View source ↗
-                      <span className="sr-only"> (opens in a new tab)</span>
-                    </a>
-                  )}
-                  {pr.note && (
-                    <p className="mt-3 rounded-lg bg-white/[0.04] p-3 text-[13px] leading-relaxed">
-                      {pr.password && (
-                        <>
-                          Password: <RevealPassword value={pr.password} />.{" "}
-                        </>
-                      )}
-                      {pr.note}
-                    </p>
-                  )}
-                </li>
+              {featured.map((pr) => (
+                <ProjectCard key={pr.id} project={pr} />
               ))}
             </ul>
+            <Link
+              href="/projects"
+              className="group mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-zinc-100 transition hover:border-cyan-300/60 hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+            >
+              See all projects
+              <span aria-hidden className="transition group-hover:translate-x-1">→</span>
+            </Link>
           </section>
 
           <section
