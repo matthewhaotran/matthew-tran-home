@@ -1,10 +1,13 @@
 export const toolbox = [
+  { label: "Front end", items: ["React", "TypeScript", "Vue.js"] },
+  { label: "Back end & cloud", items: ["C#", "AWS"] },
+  {
+    label: "Testing & CI/CD",
+    items: ["Vitest / Jest", "Selenium", "Jenkins", "Docker"],
+  },
+  { label: "Observability", items: ["Datadog", "Sentry"] },
   {
     label: "AI tooling",
-    items: ["Claude Code", "GitHub Copilot", "MCP servers & custom skills"],
-  },
-  {
-    label: "Stack & delivery",
-    items: ["React", "TypeScript", "Vue.js", "C#", "AWS", "Vitest / Jest", "Datadog / Sentry"],
+    items: ["Claude Code", "Cursor", "GitHub Copilot", "MCP servers & custom skills"],
   },
 ];

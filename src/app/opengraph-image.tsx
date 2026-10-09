@@ -26,7 +26,7 @@ export default function OpengraphImage() {
           {profile.name}
         </div>
         <div style={{ fontSize: 44, marginTop: 16, color: "#e4e4e7" }}>
-          Software Engineer building with AI
+          Full-Stack Software Engineer building with AI
         </div>
         <div style={{ fontSize: 30, marginTop: 28, color: "#a1a1aa" }}>
           {`${profile.company} · matthew-tran.com`}

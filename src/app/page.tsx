@@ -3,7 +3,7 @@ import Link from "next/link";
 import ScrollNav from "@/components/scroll-nav";
 import Tag from "@/components/tag";
 import { profile, SITE_URL } from "@/data/site";
-import { roles } from "@/data/experience";
+import { employers } from "@/data/experience";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/project-card";
 import { toolbox } from "@/data/toolbox";
@@ -21,7 +21,21 @@ const jsonLd = {
   name: profile.name,
   jobTitle: profile.title,
   url: SITE_URL,
+  email: `mailto:${profile.email}`,
+  image: `${SITE_URL}/profile-wide.jpeg`,
+  description: profile.description,
   worksFor: { "@type": "Organization", name: profile.company },
+  knowsAbout: [
+    "React",
+    "TypeScript",
+    "Vue.js",
+    "C#",
+    "AWS",
+    "Full-stack web development",
+    "Test automation",
+    "AI-assisted software development",
+    "Model Context Protocol (MCP)",
+  ],
   sameAs: [profile.github, profile.linkedin],
 };
 
@@ -69,7 +83,7 @@ export default function Home() {
             </div>
             <p className="mt-3 text-lg font-medium text-zinc-200 sm:text-xl">
               {profile.title}{" "}
-              <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
                 building with AI
               </span>
             </p>
@@ -127,36 +141,50 @@ export default function Home() {
           <section id="experience" className="mb-24 scroll-mt-16 lg:mb-32">
             <h2 className={sectionTitle}>Experience</h2>
             <ol>
-              {roles.map((r) => (
-                <li key={r.id} className="mb-10">
+              {employers.map((e) => (
+                <li key={e.id} className="mb-10">
                   <div className="grid gap-2 rounded-lg p-4 transition sm:grid-cols-8 sm:gap-6 lg:-mx-4 lg:hover:bg-white/[0.04]">
                     <p className="pt-1 text-xs font-semibold uppercase tracking-wide sm:col-span-2">
-                      {r.when}
+                      {e.when}
                     </p>
                     <div className="sm:col-span-6">
                       <h3 className="font-medium text-zinc-100">
-                        {r.title} · {r.company}
+                        {e.company}
+                        {e.formerly && (
+                          <span className="font-normal text-zinc-400"> (formerly {e.formerly})</span>
+                        )}
                       </h3>
-                      {r.summary && (
-                        <p className="mt-2 text-sm leading-relaxed">{r.summary}</p>
+                      {e.summary && (
+                        <p className="mt-2 text-sm leading-relaxed">{e.summary}</p>
                       )}
-                      {r.bullets && (
-                        <ul className="mt-3 list-disc space-y-2 pl-4 text-sm leading-relaxed marker:text-zinc-600">
-                          {r.bullets.map((b) => (
-                            <li key={b}>{b}</li>
-                          ))}
-                        </ul>
-                      )}
-                      {r.body && (
-                        <p className="mt-2 text-sm leading-relaxed">{r.body}</p>
-                      )}
-                      {r.tags && (
-                        <ul className="mt-4 flex flex-wrap gap-2">
-                          {r.tags.map((t) => (
-                            <Tag key={t}>{t}</Tag>
-                          ))}
-                        </ul>
-                      )}
+                      <ul className="mt-5 space-y-6">
+                        {e.roles.map((r) => (
+                          <li key={r.id}>
+                            <h4 className="text-sm font-medium text-zinc-200">
+                              {r.title}
+                              {r.org && <span className="font-normal text-zinc-400"> · {r.org}</span>}
+                            </h4>
+                            <p className="mt-0.5 text-xs text-zinc-400">{r.when}</p>
+                            {r.bullets && (
+                              <ul className="mt-3 list-disc space-y-2 pl-4 text-sm leading-relaxed marker:text-zinc-600">
+                                {r.bullets.map((b) => (
+                                  <li key={b}>{b}</li>
+                                ))}
+                              </ul>
+                            )}
+                            {r.body && (
+                              <p className="mt-2 text-sm leading-relaxed">{r.body}</p>
+                            )}
+                            {r.tags && (
+                              <ul className="mt-4 flex flex-wrap gap-2">
+                                {r.tags.map((t) => (
+                                  <Tag key={t}>{t}</Tag>
+                                ))}
+                              </ul>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </li>
@@ -164,8 +192,8 @@ export default function Home() {
             </ol>
           </section>
 
-          <section id="toolbox" className="mb-24 scroll-mt-16 lg:mb-32">
-            <h2 className={sectionTitle}>Toolbox</h2>
+          <section id="skills" className="mb-24 scroll-mt-16 lg:mb-32">
+            <h2 className={sectionTitle}>Skills</h2>
             <dl className="space-y-4 text-sm">
               {toolbox.map(({ label, items }) => (
                 <div key={label} className="grid gap-1 sm:grid-cols-8 sm:gap-6">
@@ -209,6 +237,12 @@ export default function Home() {
             >
               Start a conversation
             </a>
+            <p className="mt-4 text-[13px]">
+              or email{" "}
+              <a href={`mailto:${profile.email}`} className={`text-zinc-200 underline ${link}`}>
+                {profile.email}
+              </a>
+            </p>
           </section>
 
           <footer className="mt-16 text-xs text-zinc-500">
