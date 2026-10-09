@@ -9,5 +9,5 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/matthewhaotran",
   repo: "https://github.com/matthewhaotran/matthew-tran-home",
   description:
-    "Software engineer at NICE CXone Knowledge: 5 years of front end, building AI-first, owning features end to end, and mentoring teammates.",
+    "Software engineer at NICE CXone Knowledge: 5 years building for the web, front end and now backend, working AI-first, owning features end to end, and mentoring teammates.",
 };

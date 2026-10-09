@@ -18,12 +18,12 @@ export const roles: Role[] = [
     summary:
       "An enterprise knowledge-management SaaS (formerly MindTouch) that grew from a wiki powering support sites into the knowledge layer for omnichannel experiences like chatbots and AI.",
     bullets: [
-      "Own front-end features from requirements through release, working closely with product, design and QA.",
+      "Own features from requirements through release, across the front end in React, TypeScript and Vue.js and, now, the backend in C# on AWS, working closely with product, design and QA.",
       "Delivered Filter Groups for UnifiedKnowledgeService using agentic workflows, 3x faster than the estimate, and was highlighted among my team.",
       "Built MCP tools and skills that track down bug root causes: they open internal endpoints, sign in to sites, query our log tools and reproduce issues on test sites.",
       "Train and mentor teammates on AI-assisted workflows through pairing, setup guidance and documentation.",
     ],
-    tags: ["React", "Claude Code", "Playwright / Cypress"],
+    tags: ["React", "TypeScript", "Vue.js", "C#", "AWS"],
   },
   {
     id: "qa",

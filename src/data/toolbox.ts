@@ -5,6 +5,6 @@ export const toolbox = [
   },
   {
     label: "Stack & delivery",
-    items: ["React", "Vitest / Jest", "Playwright / Cypress", "Datadog / Sentry"],
+    items: ["React", "TypeScript", "Vue.js", "C#", "AWS", "Vitest / Jest", "Datadog / Sentry"],
   },
 ];
