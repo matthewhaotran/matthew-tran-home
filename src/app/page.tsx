@@ -51,14 +51,14 @@ export default function Home() {
 
       <div className="relative mx-auto max-w-screen-xl px-6 md:px-12 lg:flex lg:justify-between lg:gap-16 lg:px-24">
         {/* Left column */}
-        <header className="lg:sticky lg:top-0 lg:flex lg:h-dvh lg:w-[44%] lg:flex-col lg:justify-between lg:overflow-y-auto lg:py-24">
+        <header className="lg:sticky lg:top-0 lg:flex lg:h-dvh lg:w-[44%] lg:flex-col lg:justify-between lg:gap-10 lg:overflow-y-auto lg:py-24">
           <div className="pt-16 lg:pt-0">
             <Image
-              src="/matthew-profile.jpeg"
+              src="/profile.jpeg"
               alt="Portrait of Matthew Tran"
-              width={96}
-              height={96}
-              className="mb-8 h-24 w-24 rounded-full object-cover object-top ring-1 ring-white/15"
+              width={144}
+              height={144}
+              className="mb-8 h-32 w-32 rounded-full lg:h-36 lg:w-36 object-cover object-top ring-1 ring-white/15"
               priority
             />
             <h1 className="bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-6xl">
@@ -77,7 +77,7 @@ export default function Home() {
             <ScrollNav />
           </div>
 
-          <ul className="mt-10 flex items-center gap-6 text-sm text-zinc-300 lg:mt-0">
+          <ul className="mt-10 flex items-center gap-6 text-sm text-zinc-300 lg:mt-0 lg:shrink-0">
             <li>
               <a href={profile.github} className={link}>GitHub</a>
             </li>
