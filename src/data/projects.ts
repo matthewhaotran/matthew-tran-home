@@ -73,4 +73,15 @@ export const projects: Project[] = [
     imageSize: { width: 780, height: 500 },
     text: "A maintenance tracker for the recurring chores that are easy to forget: car, home, health and digital tasks like oil changes, HVAC filters, smoke detector tests and password reviews. Set how often each repeats and when it was last done, and it shows what's overdue or due soon. Export and import keep the data portable, and a password lock protects edits.",
   },
+  {
+    id: "matthewscup",
+    name: "Matthew's Cup",
+    href: "https://matthewscup.matthew-tran.com",
+    label: "matthewscup.matthew-tran.com",
+    image: "/projects/matthewscup.png",
+    imageSize: { width: 720, height: 450 },
+    text: "My personal rebrand of Kings Cup, the classic party game, rebuilt as a fast, mobile-first web app. Pass the phone, flip a card, follow the rule, and whoever draws the fourth king drinks the cup. Must be of legal drinking age; drink responsibly.",
+    stack: "Plain HTML, CSS and vanilla JavaScript · no build step, no dependencies",
+    code: "https://github.com/matthewhaotran/matthewscupv2",
+  },
 ];
