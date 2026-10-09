@@ -21,6 +21,12 @@ const jsonLd = {
   name: profile.name,
   jobTitle: profile.title,
   url: SITE_URL,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "San Diego",
+    addressRegion: "CA",
+    addressCountry: "US",
+  },
   email: `mailto:${profile.email}`,
   image: `${SITE_URL}/profile-wide.jpeg`,
   description: profile.description,
@@ -82,10 +88,13 @@ export default function Home() {
               </h1>
             </div>
             <p className="mt-3 text-lg font-medium text-zinc-200 sm:text-xl">
-              {profile.title}{" "}
+              {profile.headline}{" "}
               <span className="block bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
                 building with AI
               </span>
+            </p>
+            <p className="mt-2 text-sm text-zinc-400">
+              {profile.location} · {profile.workStyle}
             </p>
             <p className="mt-4 max-w-sm leading-relaxed">
               I own features from idea to production, build with AI-first
@@ -115,9 +124,10 @@ export default function Home() {
               <p>
                 I&apos;m a software engineer at{" "}
                 <span className="font-medium text-zinc-200">{profile.company}</span>{" "}
-                with 5 years of building for the web. I started in technical
-                support, moved into QA automation, found my home in front end,
-                and now work across the backend too, so I think
+                with 5 years of building for the web. I came to software from
+                bioscience, with a chemistry degree and lab quality control.
+                I started in technical support, moved into QA automation, found
+                my home in front end, and now work across the backend too, so I think
                 about the whole product lifecycle: what users struggle with, how
                 it should be built, and how it holds up once it ships.
               </p>

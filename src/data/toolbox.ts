@@ -3,7 +3,7 @@ export const toolbox = [
   { label: "Back end & cloud", items: ["C#", "AWS"] },
   {
     label: "Testing & CI/CD",
-    items: ["Vitest / Jest", "Selenium", "Jenkins", "Docker"],
+    items: ["Vitest / Jest", "Jenkins", "Docker"],
   },
   { label: "Observability", items: ["Datadog", "Sentry"] },
   {

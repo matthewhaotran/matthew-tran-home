@@ -2,7 +2,10 @@ export const SITE_URL = "https://matthew-tran.com";
 
 export const profile = {
   name: "Matthew Tran",
-  title: "Full-Stack Software Engineer",
+  title: "Software Engineer",
+  headline: "Full-Stack Software Engineer",
+  location: "San Diego, California",
+  workStyle: "Remote friendly",
   company: "NICE CXone Knowledge",
   email: "matthewhaotran@gmail.com",
   github: "https://github.com/matthewhaotran",

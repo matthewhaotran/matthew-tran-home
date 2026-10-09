@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = `${profile.name} | ${profile.title}`;
+const title = `${profile.name} | ${profile.headline}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

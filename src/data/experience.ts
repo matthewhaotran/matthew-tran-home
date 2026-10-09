@@ -31,10 +31,10 @@ export const employers: Employer[] = [
       {
         id: "swe",
         title: "Software Engineer",
-        when: "Apr 2021 – Present",
+        when: "Apr 2021 – Present · promoted from QA",
         bullets: [
           "Own features from requirements through release, across the front end in React, TypeScript and Vue.js and, now, the backend in C# on AWS, working closely with product, design and QA.",
-          "Delivered Filter Groups for UnifiedKnowledgeService using agentic workflows, 3x faster than the estimate, and was highlighted among my team.",
+          "Delivered Filter Groups for UnifiedKnowledgeService, which feeds filtering knowledge (properties, metadata, tags and other fields) to RAG-powered LLM experiences. Built with agentic workflows at roughly 3x speed, and highlighted among my team.",
           "Built MCP tools and skills that track down bug root causes: they open internal endpoints, sign in to sites, query our log tools and reproduce issues on test sites.",
           "Train and mentor teammates on AI-assisted workflows through pairing, setup guidance and documentation.",
         ],
