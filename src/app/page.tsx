@@ -53,17 +53,20 @@ export default function Home() {
         {/* Left column */}
         <header className="lg:sticky lg:top-0 lg:flex lg:h-dvh lg:w-[44%] lg:flex-col lg:justify-between lg:gap-10 lg:overflow-y-auto lg:py-24">
           <div className="pt-16 lg:pt-0">
-            <Image
-              src="/profile.jpeg"
-              alt="Portrait of Matthew Tran"
-              width={144}
-              height={144}
-              className="mb-8 h-32 w-32 rounded-full lg:h-36 lg:w-36 object-cover object-top ring-1 ring-white/15"
-              priority
-            />
-            <h1 className="bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-6xl">
-              {profile.name}
-            </h1>
+            <div className="w-fit">
+              <Image
+                src="/profile-wide.jpeg"
+                alt="Portrait of Matthew Tran"
+                width={960}
+                height={640}
+                sizes="(min-width: 640px) 385px, 300px"
+                className="mb-8 aspect-[3/2] [@media(max-height:800px)]:aspect-[2/1] w-0 min-w-full rounded-2xl object-cover object-top ring-1 ring-white/15"
+                priority
+              />
+              <h1 className="bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-6xl">
+                {profile.name}
+              </h1>
+            </div>
             <p className="mt-3 text-lg font-medium text-zinc-200 sm:text-xl">
               {profile.title}{" "}
               <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
