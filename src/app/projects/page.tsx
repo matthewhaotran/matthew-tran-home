@@ -21,7 +21,7 @@ export default function ProjectsPage() {
         aria-hidden
         className="pointer-events-none fixed -right-48 top-1/3 h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle,rgba(6,182,212,0.35),transparent_65%)]"
       />
-      <main className="relative mx-auto max-w-4xl px-6 py-16 md:px-12 lg:py-24">
+      <main className="relative mx-auto max-w-7xl px-6 py-16 md:px-12 lg:px-16 lg:py-24">
         <Link
           href="/"
           className="group inline-flex items-center gap-2 text-sm font-medium text-zinc-300 transition hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
@@ -35,7 +35,7 @@ export default function ProjectsPage() {
         <p className="mt-4 max-w-xl leading-relaxed">
           Things I&apos;ve built to learn, to scratch an itch, or just for fun.
         </p>
-        <ul className="mt-12 grid gap-6 md:grid-cols-2">
+        <ul className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((pr) => (
             <ProjectCard key={pr.id} project={pr} />
           ))}

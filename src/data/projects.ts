@@ -84,4 +84,14 @@ export const projects: Project[] = [
     stack: "Plain HTML, CSS and vanilla JavaScript · no build step, no dependencies",
     code: "https://github.com/matthewhaotran/matthewscupv2",
   },
+  {
+    id: "juliette",
+    name: "Juliette's Website",
+    href: "https://juliettetran.com",
+    label: "juliettetran.com",
+    image: "/projects/juliette.png",
+    imageSize: { width: 1000, height: 150 },
+    text: "A personal website for my newborn daughter, built to show off her pictures and share a blog with family and friends.",
+    stack: "Next.js · React · Tailwind · Markdown blog · Vercel",
+  },
 ];

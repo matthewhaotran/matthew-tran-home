@@ -9,7 +9,7 @@ Personal portfolio for Matthew Tran, a software engineer building with AI. Live 
 - **About**: who I am and how I work (AI-first, MCP tooling, mentoring)
 - **Experience**: NICE CXone Knowledge (formerly MindTouch) with Software Engineer, QA and Support roles, then MadCap Software and earlier work
 - **Skills**: front end, back end and cloud, testing and CI/CD, observability, AI tooling
-- **Projects**: four featured projects with previews, plus a `/projects` page listing all of them (Chat, Shop, Unpaywall, Baby Dashboard, Upkeep, Matthew's Cup)
+- **Projects**: four featured projects with previews, plus a `/projects` page listing all of them (Chat, Shop, Unpaywall, Baby Dashboard, Upkeep, Matthew's Cup, Juliette's Website)
 
 ## Stack
 
