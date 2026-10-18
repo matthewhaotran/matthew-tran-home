@@ -104,6 +104,7 @@ export const projects: Project[] = [
     label: "claimcheck.matthew-tran.com",
     image: "/projects/claimcheck.png",
     imageSize: { width: 1400, height: 874 },
+    code: "https://github.com/matthewhaotran/claimcheck",
     private: true,
     text: "A personal tool built for one specific job: reading the purchase receipts in my Gmail and checking what I bought against current product recalls and open class action settlements, so I don't miss a safety notice or money I'm owed. Because it reads Gmail, sign-in is limited to an allowlist of approved Google accounts, so the live site only works for me. The preview is a scan of sample emails.",
     stack:
