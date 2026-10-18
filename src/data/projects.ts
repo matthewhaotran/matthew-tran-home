@@ -9,6 +9,8 @@ export type Project = {
   text: string;
   stack?: string;
   code?: string;
+  /** Gated or personal app: label the link "View site" instead of "Visit app". */
+  private?: boolean;
   note?: string;
   password?: string;
 };
@@ -93,5 +95,6 @@ export const projects: Project[] = [
     imageSize: { width: 1000, height: 150 },
     text: "A personal website for my newborn daughter, built to show off her pictures and share a blog with family and friends.",
     stack: "Next.js · React · Tailwind · Markdown blog · Vercel",
+    code: "https://github.com/matthewhaotran/juliettetran",
   },
 ];
